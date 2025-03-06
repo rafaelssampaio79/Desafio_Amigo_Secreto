@@ -14,6 +14,13 @@ function adicionarAmigo() {
     }
 }
 
+document.getElementById("amigo").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Evita o comportamento padrão
+        adicionarAmigo();
+    }
+});
+
 function atualizarLista() {
     const lista = document.getElementById("listaAmigos");
     lista.innerHTML = ""; // Limpa a lista antes de atualizar
